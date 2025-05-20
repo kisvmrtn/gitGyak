@@ -159,7 +159,7 @@ public class NewJFrame extends javax.swing.JFrame {
         JFileChooser jfc = new JFileChooser(hely);//aktuális projekt könnyvtár
         
         /* jfc paraméterezése: */
-        File kivalasztottFajl = new File(hely + "\\" + txtNev.getText() + ".txt");
+        File kivalasztottFajl = new File(hely + "\\" + "konfigok" + ".txt");
         System.out.println("fajl = " + kivalasztottFajl);
         jfc.setSelectedFile(kivalasztottFajl);
         
@@ -231,9 +231,7 @@ public class NewJFrame extends javax.swing.JFrame {
         //String szak = cmbSzak.getSelectedItem().toString();
         String szak = (String)cmbSzak.getSelectedItem();
         boolean hirlevel = chbHirlevel.isSelected();
-        String msg = "név: " + nev
-                +"\nszak: %s(%d)".formatted(szak, cmbSzak.getSelectedIndex())
-                +"\nhírlevél: " + (hirlevel?"kér":"nem kér");
+        String msg = nev + " " + szak + " " + hirlevel;
         return msg;
     }
     private void kilepes() throws HeadlessException {
