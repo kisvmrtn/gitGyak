@@ -1,0 +1,3 @@
+név: Janos
+szak: Rendszergazda(2)
+hírlevél: true
