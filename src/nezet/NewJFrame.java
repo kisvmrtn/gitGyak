@@ -32,12 +32,12 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         resetBtn = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        konfMenu = new javax.swing.JMenu();
         mnuPrgBetoltes = new javax.swing.JMenuItem();
         mnuPrgMentes = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         mnuPrgKilepes = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        progMenu = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -63,7 +63,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jMenu1.setText("Konfiguráció");
+        konfMenu.setText("Konfiguráció");
 
         mnuPrgBetoltes.setText("Betöltés...");
         mnuPrgBetoltes.addActionListener(new java.awt.event.ActionListener() {
@@ -71,7 +71,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 mnuPrgBetoltesActionPerformed(evt);
             }
         });
-        jMenu1.add(mnuPrgBetoltes);
+        konfMenu.add(mnuPrgBetoltes);
 
         mnuPrgMentes.setText("Mentés...");
         mnuPrgMentes.addActionListener(new java.awt.event.ActionListener() {
@@ -79,8 +79,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 mnuPrgMentesActionPerformed(evt);
             }
         });
-        jMenu1.add(mnuPrgMentes);
-        jMenu1.add(jSeparator1);
+        konfMenu.add(mnuPrgMentes);
+        konfMenu.add(jSeparator1);
 
         mnuPrgKilepes.setText("Kilépés...");
         mnuPrgKilepes.addActionListener(new java.awt.event.ActionListener() {
@@ -88,16 +88,16 @@ public class NewJFrame extends javax.swing.JFrame {
                 mnuPrgKilepesActionPerformed(evt);
             }
         });
-        jMenu1.add(mnuPrgKilepes);
+        konfMenu.add(mnuPrgKilepes);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(konfMenu);
 
-        jMenu2.setText("Program");
+        progMenu.setText("Program");
 
         jMenuItem1.setText("jMenuItem1");
-        jMenu2.add(jMenuItem1);
+        progMenu.add(jMenuItem1);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(progMenu);
 
         setJMenuBar(jMenuBar1);
 
@@ -221,7 +221,9 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_mnuPrgBetoltesActionPerformed
 
     private void resetBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetBtnActionPerformed
-        // TODO add your handling code here:
+        txtNev.setText("");
+        cmbSzak.setSelectedIndex(0);
+        chbHirlevel.setSelected(true);
     }//GEN-LAST:event_resetBtnActionPerformed
 
     private String tartalom(){
@@ -286,14 +288,14 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbSzak;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JMenu konfMenu;
     private javax.swing.JMenuItem mnuPrgBetoltes;
     private javax.swing.JMenuItem mnuPrgKilepes;
     private javax.swing.JMenuItem mnuPrgMentes;
+    private javax.swing.JMenu progMenu;
     private javax.swing.JButton resetBtn;
     private javax.swing.JTextField txtNev;
     // End of variables declaration//GEN-END:variables
